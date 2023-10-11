@@ -1,34 +1,114 @@
 /* The styles for the elements */
-body { 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 85%;
-    margin-left: 2em;
-    margin-right: 2em;
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 85%;
+	margin-left: 2em;
+	margin-right: 2em;
 }
-h1 {     
-    font-size: 140%;
-    color: teal;
-    margin-bottom: .5em;    
+
+h1 {
+	margin-top: 100px;
+	font-size: 140%;
+	color: teal;
+	margin-bottom: .5em;
+	text-align: center;
 }
+
+p {
+	text-align: center;
+}
+
 br {
-    clear: both;
+	clear: both;
 }
 
 #quantity {
-    width: 2em;
+	width: 2em;
 }
 
 /* The styles for the tables */
 table {
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: 50em;
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 50em;
 }
-th, td {
-    border: 1px solid black;
-    text-align: left;
-    padding: .5em;
+
+th,
+td {
+	border: 1px solid black;
+	text-align: left;
+	padding: .5em;
 }
+
 .right {
-    text-align: right;
+	text-align: right;
+}
+
+.styled-table {
+	width: 100%;
+	max-width: 600px;
+	/* Adjust the maximum width as needed */
+	margin: 0 auto;
+	background-color: lightseagreen;
+	/* Light gray background color */
+	border: none;
+	border-radius: 5px;
+	color: white;
+}
+
+.styled-table th {
+	background-color: darkslategray;
+	color: #fff;
+	font-weight: bold;
+	padding: 10px;
+	text-align: left;
+}
+
+.styled-table td {
+	padding: 10px;
+	text-align: left;
+}
+
+.styled-table tr:nth-child(even) {
+	background-color: teal;
+}
+
+td a {
+	color: white;
+}
+
+.button {
+	margin: 10px;
+	background-color: royalblue;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.button:hover {
+	background-color: coral;
+}
+
+td a:hover {
+	color: coral;
+}
+
+.button-diff {
+	margin: 10px 550px;
+	background-color: royalblue;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.button-diff:hover {
+	background-color: coral;
 }

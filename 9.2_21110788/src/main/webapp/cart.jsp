@@ -10,7 +10,7 @@
 
 	<h1>Your cart</h1>
 
-	<table>
+	<table class="styled-table">
 		<tr>
 			<th>Quantity</th>
 			<th>Description</th>
@@ -28,7 +28,7 @@
 							value="<c:out value='${item.product.code}'/>"> <input
 							type=text name="quantity"
 							value="<c:out value='${item.quantity}'/>" id="quantity">
-						<input type="submit" value="Update">
+						<input type="submit" value="Update" class="button">
 					</form>
 				</td>
 				<td><c:out value='${item.product.description}' /></td>
@@ -39,7 +39,7 @@
 						<input type="hidden" name="productCode"
 							value="<c:out value='${item.product.code}'/>"> <input
 							type="hidden" name="quantity" value="0"> <input
-							type="submit" value="Remove Item">
+							type="submit" value="Remove Item" class="button">
 					</form>
 				</td>
 			</tr>
@@ -63,12 +63,12 @@
 
 	<form action="" method="post">
 		<input type="hidden" name="action" value="shop"> <input
-			type="submit" value="Continue Shopping">
+			type="submit" value="Continue Shopping" class="button-diff">
 	</form>
 
 	<form action="" method="post">
 		<input type="hidden" name="action" value="checkout"> <input
-			type="submit" value="Checkout">
+			type="submit" value="Checkout" class="button-diff">
 	</form>
 </body>
 </html>
