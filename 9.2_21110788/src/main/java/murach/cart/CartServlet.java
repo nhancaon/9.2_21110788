@@ -27,6 +27,9 @@ public class CartServlet extends HttpServlet {
 		if (action == null) {
 			action = "cart"; // default action
 		}
+		if (action.equals("update")) {
+			url = "/index.jsp"; // the "index" page
+		}
 
 		// perform action and set URL to appropriate page
 		if (action.equals("shop")) {
@@ -45,14 +48,27 @@ public class CartServlet extends HttpServlet {
 			// the quantity is automatically reset to 1.
 			int quantity;
 			try {
+				// Check if there's a quantity already in the cart
+				LineItem existingItem = cart.getItemByProductCode(productCode);
+				if (existingItem != null) {
+					quantity = existingItem.getQuantity() + 1;
+				} else {
+					quantity = Integer.parseInt(quantityString);
+					if (quantity < 0) {
+						quantity = 1;
+					}
+				}
+			} catch (NumberFormatException nfe) {
+				quantity = 1;
+			}
+			try {
 				quantity = Integer.parseInt(quantityString);
 				if (quantity < 0) {
 					quantity = 1;
 				}
 			} catch (NumberFormatException nfe) {
-				quantity = 1;
-			}
 
+			}
 			String path = sc.getRealPath("/WEB-INF/products.txt");
 			Product product = ProductIO.getProduct(productCode, path);
 
